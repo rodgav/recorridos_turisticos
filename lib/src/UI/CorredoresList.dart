@@ -28,7 +28,7 @@ class _CorredorListState extends State<CorredoresList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Atractivos'),
+        title: Text('Corredores'),
       ),
       body: StreamBuilder(
           stream: bloc.danzas,
@@ -51,7 +51,7 @@ class _CorredorListState extends State<CorredoresList> {
     return GridView.builder(
         itemCount: snapshot.data.corredores.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 1, childAspectRatio: 0.7),
+            crossAxisCount: 1, childAspectRatio: 2),
         itemBuilder: (BuildContext context, int index) {
           return GestureDetector(
             child: Card(
@@ -59,7 +59,7 @@ class _CorredorListState extends State<CorredoresList> {
                   borderRadius: BorderRadius.circular(5.0)),
               child: Container(
                 padding: EdgeInsets.only(
-                    top: 0.0, left: 0.0, right: 0.0, bottom: 0.0),
+                    top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5.0),
                   image: DecorationImage(

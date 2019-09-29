@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recorridos_turisticos/src/UI/Image_Detail.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AtractivoDetail extends StatefulWidget {
@@ -68,6 +69,16 @@ class _AtractivoDetailState extends State<AtractivoDetail> {
                         fit: BoxFit.cover,
                       ),
                     ),
+                    actions: <Widget>[
+                      IconButton(
+                          icon: Icon(
+                            Icons.image,
+                            color: Colors.black,
+                          ),
+                          onPressed: () {
+                            OpenImagenDetail(imagen);
+                          }),
+                    ],
                   )
                 ];
               },
@@ -131,5 +142,13 @@ class _AtractivoDetailState extends State<AtractivoDetail> {
     } else {
       throw 'No se puedo abrir';
     }
+  }
+
+  void OpenImagenDetail(imagen) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return ImageDetail(
+        imagen: imagen,
+      );
+    }));
   }
 }

@@ -50,7 +50,7 @@ class _RegionesListState extends State<RegionesList> {
     return GridView.builder(
         itemCount: snapshot.data.regiones.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 1, childAspectRatio: 0.7),
+            crossAxisCount: 1, childAspectRatio: 2),
         itemBuilder: (BuildContext context, int index) {
           return GestureDetector(
             child: Card(

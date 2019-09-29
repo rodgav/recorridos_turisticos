@@ -48,7 +48,7 @@ class _FolkloreListState extends State<FolkloreList> {
     return GridView.builder(
         itemCount: snapshot.data.folklore.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 1, childAspectRatio: 0.7),
+            crossAxisCount: 1, childAspectRatio: 2),
         itemBuilder: (BuildContext context, int index) {
           return
             GestureDetector(

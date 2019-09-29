@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:recorridos_turisticos/src/Models/Regiones_Item.dart';
 import 'package:recorridos_turisticos/src/UI/AtractivosList.dart';
 import 'package:recorridos_turisticos/src/UI/CorredoresList.dart';
 import 'package:recorridos_turisticos/src/UI/DanzasList.dart';
@@ -610,7 +609,7 @@ class Principal extends StatelessWidget {
                             Text(
                               'CORREDORES',
                               style: TextStyle(
-                                  fontSize: 25.0,
+                                  fontSize: 22.0,
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
                             ),

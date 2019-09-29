@@ -3,6 +3,7 @@ import 'package:recorridos_turisticos/src/Blocs/Corredores_Detail_Bloc.dart';
 import 'package:recorridos_turisticos/src/Blocs/Corredores_Detail_Bloc_Provider.dart';
 import 'package:recorridos_turisticos/src/Models/Atractivos_Item.dart';
 import 'package:recorridos_turisticos/src/UI/Atractivo_Detail.dart';
+import 'package:recorridos_turisticos/src/UI/Image_Detail.dart';
 
 class CorredorDetail extends StatefulWidget {
   final id;
@@ -63,6 +64,16 @@ class _CorredorDetailState extends State<CorredorDetail> {
                         fit: BoxFit.cover,
                       ),
                     ),
+                    actions: <Widget>[
+                      IconButton(
+                          icon: Icon(
+                            Icons.image,
+                            color: Colors.black,
+                          ),
+                          onPressed: () {
+                            OpenImagenDetail(imagen);
+                          }),
+                    ],
                   )
                 ];
               },
@@ -186,6 +197,14 @@ class _CorredorDetailState extends State<CorredorDetail> {
         latitud: data.atractivos[index].latitud,
         longitud: data.atractivos[index].longitud,
         imagen: data.atractivos[index].imagen,
+      );
+    }));
+  }
+
+  void OpenImagenDetail(imagen) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return ImageDetail(
+        imagen: imagen,
       );
     }));
   }
