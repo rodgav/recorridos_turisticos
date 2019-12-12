@@ -1,4 +1,4 @@
-import 'package:bidirectional_scroll_view/bidirectional_scroll_view.dart';
+//import 'package:bidirectional_scroll_view/bidirectional_scroll_view.dart';
 import 'package:flutter/material.dart';
 import 'package:recorridos_turisticos/src/Blocs/FechasFestivas_Bloc.dart';
 import 'package:recorridos_turisticos/src/Models/FechasFestivas_Item.dart';
@@ -47,7 +47,7 @@ class _FechasFestivasListState extends State<FechasFestivasList> {
   }
 
   Widget buildFechasFestivasList(AsyncSnapshot<FechasFestivas_Item> snapshot) {
-    return BidirectionalScrollViewPlugin(
+    /*return BidirectionalScrollViewPlugin(
         //scrollDirection: Axis.vertical,
         child: DataTable(
             columns: <DataColumn>[
@@ -69,6 +69,6 @@ class _FechasFestivasListState extends State<FechasFestivasList> {
                       DataCell(Text(fecha.lugar)),
                       DataCell(Text(fecha.provincia))
                     ]))
-                .toList()));
+                .toList()));*/
   }
 }

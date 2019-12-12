@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:recorridos_turisticos/src/Blocs/Danzas_Bloc.dart';
 import 'package:recorridos_turisticos/src/Models/Danzas_Item.dart';
@@ -59,16 +60,24 @@ class _DanzasListState extends State<DanzasList> {
               child: Container(
                 padding: EdgeInsets.only(
                     top: 0.0, left: 0.0, right: 0.0, bottom: 0.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0),
-                  image: DecorationImage(
-                      image: NetworkImage(snapshot.data.danzas[index].imagen),
-                      fit: BoxFit.cover,
-                      colorFilter: ColorFilter.mode(
-                          Color.fromARGB(100, 0, 0, 0), BlendMode.hardLight)),
-                ),
                 child: Stack(
                   children: <Widget>[
+                    CachedNetworkImage(
+                      imageUrl: snapshot.data.danzas[index].imagen,
+                      imageBuilder: (context, imageProvider) => Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: imageProvider,
+                              fit: BoxFit.cover,
+                              colorFilter: ColorFilter.mode(
+                                  Color.fromARGB(100, 0, 0, 0),
+                                  BlendMode.hardLight)),
+                        ),
+                      ),
+                      placeholder: (context, url) =>
+                          CircularProgressIndicator(),
+                      errorWidget: (context, url, error) => Icon(Icons.error),
+                    ),
                     SizedBox(
                       width: double.infinity,
                       child: Padding(

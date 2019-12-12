@@ -11,7 +11,7 @@ class _SplashScreenState extends State<SplashScreenUI> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-        seconds: 5,
+        seconds: 10,
         navigateAfterSeconds: Principal(),
         title: Text(
           'Bienvenido a Corredores Turisticos PUNO',
@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreenUI> {
           'Realizado por: Veronica Sucari Sucari',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
         ),
-        image: Image.network('https://i.imgur.com/TyCSG9A.png'),
+        image: Image(image: ExactAssetImage('imagenes/logo.png')),
         backgroundColor: Colors.orangeAccent,
         styleTextUnderTheLoader: TextStyle(),
         photoSize: 100.0,
