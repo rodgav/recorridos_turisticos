@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:recorridos_turisticos/src/UI/AtractivosList.dart';
 import 'package:recorridos_turisticos/src/UI/CorredoresList.dart';
 import 'package:recorridos_turisticos/src/UI/DanzasList.dart';
@@ -312,9 +313,10 @@ class Principal extends StatelessWidget {
                   children: <Widget>[
                     SizedBox(
                       width: double.infinity,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 70.0),
+                      child: Center(
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
                               'REGION',
@@ -360,9 +362,9 @@ class Principal extends StatelessWidget {
                   children: <Widget>[
                     SizedBox(
                       width: double.infinity,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 70.0),
-                        child: Column(
+                      child: Center(
+                        child: Column(crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
                               'ATRACTIVOS',
@@ -408,9 +410,10 @@ class Principal extends StatelessWidget {
                   children: <Widget>[
                     SizedBox(
                       width: double.infinity,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 80.0),
+                      child: Center(
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
                               'FECHAS',
@@ -458,9 +461,10 @@ class Principal extends StatelessWidget {
                   children: <Widget>[
                     SizedBox(
                       width: double.infinity,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 80.0),
+                      child: Center(
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
                               'FOLKLORE',
@@ -506,9 +510,10 @@ class Principal extends StatelessWidget {
                   children: <Widget>[
                     SizedBox(
                       width: double.infinity,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 80.0),
+                      child: Center(
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
                               'DANZAS',
@@ -554,9 +559,10 @@ class Principal extends StatelessWidget {
                   children: <Widget>[
                     SizedBox(
                       width: double.infinity,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 80.0),
+                      child: Center(
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
                               'IMAGENES',
@@ -602,9 +608,10 @@ class Principal extends StatelessWidget {
                   children: <Widget>[
                     SizedBox(
                       width: double.infinity,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 80.0),
+                      child: Center(
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Text(
                               'CORREDORES',

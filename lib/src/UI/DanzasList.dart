@@ -76,7 +76,12 @@ class _DanzasListState extends State<DanzasList> {
                       ),
                       placeholder: (context, url) =>
                           CircularProgressIndicator(),
-                      errorWidget: (context, url, error) => Icon(Icons.error),
+                      errorWidget: (context, url, error) => Container(
+                        color: Colors.grey,
+                        child: Center(
+                          child: Icon(Icons.error),
+                        ),
+                      ),
                     ),
                     SizedBox(
                       width: double.infinity,

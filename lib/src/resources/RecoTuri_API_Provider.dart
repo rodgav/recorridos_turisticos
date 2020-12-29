@@ -10,7 +10,16 @@ import 'package:recorridos_turisticos/src/Models/Regiones_Item.dart';
 
 class RecorrTurisAPIProvider {
   Client http = Client();
-  final _baseUrl = 'https://rsgm.online/APICorredorTuristico/V1/?accion=';
+  final _baseUrl = 'http://192.168.1.33/APICorredorTuristico/v1/?accion=';
+
+  Future<Regiones_Item> getRegiones() async {
+    final response = await http.get('${_baseUrl}regiones');
+    if (response.statusCode == 200) {
+      return Regiones_Item.fromJson(json.decode(response.body));
+    } else {
+      throw Exception('Error al obtener las regiones');
+    }
+  }
 
   Future<Atractivos_Item> getAtractivos() async {
     final response = await http.get('${_baseUrl}atractivos');
@@ -19,15 +28,6 @@ class RecorrTurisAPIProvider {
       return Atractivos_Item.fromJson(json.decode(response.body));
     } else {
       throw Exception('Error al obtener atractivos');
-    }
-  }
-
-  Future<Danzas_Item> getDanzas() async {
-    final response = await http.get('${_baseUrl}danzas');
-    if (response.statusCode == 200) {
-      return Danzas_Item.fromJson(json.decode(response.body));
-    } else {
-      throw Exception('Error al obtener las danzas');
     }
   }
 
@@ -49,21 +49,21 @@ class RecorrTurisAPIProvider {
     }
   }
 
+  Future<Danzas_Item> getDanzas() async {
+    final response = await http.get('${_baseUrl}danzas');
+    if (response.statusCode == 200) {
+      return Danzas_Item.fromJson(json.decode(response.body));
+    } else {
+      throw Exception('Error al obtener las danzas');
+    }
+  }
+
   Future<Imagenes_Item> getImagenes() async {
     final response = await http.get('${_baseUrl}imagenes');
     if (response.statusCode == 200) {
       return Imagenes_Item.fromJson(json.decode(response.body));
     } else {
       throw Exception('Error al obtener las imagenes');
-    }
-  }
-
-  Future<Regiones_Item> getRegiones() async {
-    final response = await http.get('${_baseUrl}regiones');
-    if (response.statusCode == 200) {
-      return Regiones_Item.fromJson(json.decode(response.body));
-    } else {
-      throw Exception('Error al obtener las regiones');
     }
   }
 

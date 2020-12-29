@@ -60,15 +60,6 @@ class _AtractivosListState extends State<AtractivosList> {
               child: Container(
                 padding: EdgeInsets.only(
                     top: 0.0, left: 0.0, right: 0.0, bottom: 0.0),
-                /*decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0),
-                  image: DecorationImage(
-                      image:
-                          NetworkImage(snapshot.data.atractivos[index].imagen),
-                      fit: BoxFit.cover,
-                      colorFilter: ColorFilter.mode(
-                          Color.fromARGB(100, 0, 0, 0), BlendMode.hardLight)),
-                ),*/
                 child: Stack(
                   children: <Widget>[
                     CachedNetworkImage(
@@ -85,7 +76,12 @@ class _AtractivosListState extends State<AtractivosList> {
                       ),
                       placeholder: (context, url) =>
                           CircularProgressIndicator(),
-                      errorWidget: (context, url, error) => Icon(Icons.error),
+                      errorWidget: (context, url, error) => Container(
+                        color: Colors.grey,
+                        child: Center(
+                          child: Icon(Icons.error),
+                        ),
+                      ),
                     ),
                     SizedBox(
                       width: double.infinity,
