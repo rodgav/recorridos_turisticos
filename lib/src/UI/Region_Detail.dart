@@ -57,8 +57,8 @@ class _RegionDetailState extends State<RegionDetail> {
               },
               body: Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: ListView(
+                  shrinkWrap: true,
                   children: <Widget>[
                     Text(
                       nombre,
@@ -69,9 +69,6 @@ class _RegionDetailState extends State<RegionDetail> {
                       margin: EdgeInsets.only(top: 10.0),
                     ),
                     Text(descripcion),
-                    Container(
-                      margin: EdgeInsets.only(top: 10.0),
-                    ),
                   ],
                 ),
               ))),

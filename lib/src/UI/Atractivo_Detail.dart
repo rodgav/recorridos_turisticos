@@ -113,19 +113,19 @@ class _AtractivoDetailState extends State<AtractivoDetail> {
                             onPressed: () {
                               _AbrirMaps(latitud, longitud);
                             }),
-                        Text(
+                        Column(children: [Text(
                           'Latitud: $latitud',
                           style: TextStyle(
                               fontSize: 18.0, fontStyle: FontStyle.italic),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left: 10.0),
-                        ),
-                        Text(
-                          'Longitud: $longitud',
-                          style: TextStyle(
-                              fontSize: 18.0, fontStyle: FontStyle.italic),
-                        )
+                          Container(
+                            margin: EdgeInsets.only(left: 10.0),
+                          ),
+                          Text(
+                            'Longitud: $longitud',
+                            style: TextStyle(
+                                fontSize: 18.0, fontStyle: FontStyle.italic),
+                          )],)
                       ],
                     ),
                   ],
